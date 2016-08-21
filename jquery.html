@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="js/client.js"></script>
+	</head>
+	<body>
+		<!--hide an html element-->
+		<p>Click me to hide p elements</p>
+
+		<!--hide an element by id-->
+		<div id="test">Click me to hide elements with id test</div>
+
+		<!--hide an element by class-->
+		<div class="test">Click me to hide elements with class test</div>
+
+		<!--hide all elements by * selector-->
+		<div class="all">Click me to hide all elements</div>
+
+		<!--hide the same element by this selector-->
+		<button>Click hide me</button>
+
+		<!--hide p elements of class intro only-->
+		<button class="intro">Click to hide button elements with class intro</button>
+
+		<!--Other selectors-->
+		<br><br>
+		Other Selectors
+		<pre>
+			$("*")				selectors all elements
+			$(this)				selectors the current HTML element
+			$("p.intro")			Selects all &lt;p> elements with class="intro" 
+			$("p:first")			Selects the first &lt;p> elemen	Try it
+			$("ul li:first")		Selects the first &lt;li> element of the first &lt;ul>
+			$("ul li:first-child")		Selects the first &lt;li> element of every &lt;ul>
+			$("[href]")			Selects all elements with an href attributey
+			$("a[target='_blank']")		Selects all &lt;a> elements with a target attribute value equal to "_blank"
+			$("a[target!='_blank']")	Selects all &lt;a> elements with a target attribute value NOT equal to "_blank"
+			$(":button")			Selects all &lt;button> elements and &lt;input> elements of type="button"
+			$("tr:even")			Selects all even &lt;tr> elements
+			$("tr:odd")			Selects all odd &lt;tr> elements
+		</pre>
+		jQuery events<br>
+		<img src="2.jpg">
+
+		<!--double click event-->
+		<div class="dblclick">Double click me to hide</div>
+
+		<!--mouse enter event-->
+		<div class="mouseenter">Mouse enter event.</div>
+	</body>
+</html>

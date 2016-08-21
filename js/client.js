@@ -1,0 +1,27 @@
+$(document).ready(function(){
+	$("p").click(function(){
+		$("p").hide();
+	});
+	$("#test").click(function(){
+		$("#test").hide();
+	});
+	$(".test").click(function(){
+		$(".test").hide();
+	})
+	$(".all").click(function(){
+		$("*").hide();
+	});
+	$("button").click(function(){
+		$(this).hide();
+	});
+	$("button.intro").click(function(){
+		$(this).hide();
+	});
+	$(".dblclick").dblclick(function(){
+		$(this).hide();
+	});
+	$(".mouseenter").mouseenter(function(){
+		$(this).hide();
+	});
+	
+});
