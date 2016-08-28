@@ -1,3 +1,11 @@
+<?php
+	session_start();
+	require_once 'db_connect.php';
+
+	//checking authorised accesss
+	if(!isset($_SESSION["user"]))
+		header("Location: ajax.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -23,13 +31,20 @@
   	</head>
   	<body>
 
-		<!--login form starts-->
-		<form action=check.php method=post>
-			<input type=text name=username placeholder=username required>
-			<input type=password name=password placeholder=password required>
-			<button name=login>Login</button>
-		</form>  		
-		<!--login form ends-->
+  	<div class="container-fluid">
+  		<div class=row>
+  			<div class="col-xs-4" style="background:#6699ff; height:500px;">
+  				USERS
+  				<div class="user"></div>
+  			</div>
+  			<div class="col-xs-8" style="background:#33cc33; height:500px;">
+  				MEASSAGES
+  				<div class="message"></div>
+  			</div>
+		  	<button>Click me to load messages</button>
+		  	<div class=msg></div>
+	  	</div>
+  	</div>
 
 	   	<!-- Bootstrap script -->
 	    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
